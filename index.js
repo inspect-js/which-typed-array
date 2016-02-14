@@ -38,7 +38,7 @@ var tryTypedArrays = function tryTypedArrays(value) {
 				if (name === typedArray) {
 					foundName = name;
 				}
-			} catch (e) {/**/}
+			} catch (e) { /**/ }
 		}
 	});
 	return foundName;
