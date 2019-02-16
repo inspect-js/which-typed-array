@@ -15,7 +15,9 @@ var typedArrays = [
 	'Uint8Array',
 	'Uint8ClampedArray',
 	'Uint16Array',
-	'Uint32Array'
+	'Uint32Array',
+	'BigInt64Array',
+	'BigUint64Array'
 ];
 
 var slice = bind.call(Function.call, String.prototype.slice);
