@@ -20,6 +20,7 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
+		"prepublish": "safe-publish-latest",
 		"pretest": "npm run --silent lint",
 		"test": "npm run tests-only",
 		"tests-only": "node --es-staging test",
@@ -56,14 +57,15 @@
 		"is-typed-array": "^1.1.0"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^14.1.0",
+		"@ljharb/eslint-config": "^15.0.1",
 		"covert": "^1.1.1",
-		"eslint": "^6.4.0",
+		"eslint": "^6.6.0",
 		"foreach": "^2.0.5",
 		"is-callable": "^1.1.4",
 		"make-arrow-function": "^1.1.0",
 		"make-generator-function": "^1.1.0",
 		"replace": "^1.1.1",
+		"safe-publish-latest": "^1.1.4",
 		"semver": "^6.3.0",
 		"tape": "^4.11.0"
 	},

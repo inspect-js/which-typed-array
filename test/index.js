@@ -33,6 +33,7 @@ test('not arrays', function (t) {
 
 	t.equal(false, whichTypedArray({}), 'object is not typed array');
 	t.equal(false, whichTypedArray(/a/g), 'regex literal is not typed array');
+	// eslint-disable-next-line prefer-regex-literals
 	t.equal(false, whichTypedArray(new RegExp('a', 'g')), 'regex object is not typed array');
 	t.equal(false, whichTypedArray(new Date()), 'new Date() is not typed array');
 
