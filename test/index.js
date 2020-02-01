@@ -4,8 +4,8 @@ var test = require('tape');
 var whichTypedArray = require('../');
 var isCallable = require('is-callable');
 var hasSymbols = typeof Symbol === 'function' && typeof Symbol('foo') === 'symbol';
-var genFn = require('make-generator-function');
-var arrowFn = require('make-arrow-function')();
+var generators = require('make-generator-function')();
+var arrows = require('make-arrow-function').list();
 var forEach = require('foreach');
 
 var typedArrayNames = [
@@ -58,13 +58,17 @@ test('Functions', function (t) {
 	t.end();
 });
 
-test('Generators', { skip: !genFn }, function (t) {
-	t.equal(false, whichTypedArray(genFn), 'generator function is not typed array');
+test('Generators', { skip: generators.length === 0 }, function (t) {
+	forEach(generators, function (genFn) {
+		t.equal(false, whichTypedArray(genFn), 'generator function ' + genFn + ' is not typed array');
+	});
 	t.end();
 });
 
-test('Arrow functions', { skip: !arrowFn }, function (t) {
-	t.equal(false, whichTypedArray(arrowFn), 'arrow function is not typed array');
+test('Arrow functions', { skip: arrows.length === 0 }, function (t) {
+	forEach(arrows, function (arrowFn) {
+		t.equal(false, whichTypedArray(arrowFn), 'arrow function ' + arrowFn + ' is not typed array');
+	});
 	t.end();
 });
 
