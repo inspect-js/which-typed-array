@@ -56,7 +56,7 @@
 	],
 	"dependencies": {
 		"available-typed-arrays": "^1.0.2",
-		"es-abstract": "^1.17.4",
+		"es-abstract": "^1.17.5",
 		"function-bind": "^1.1.1",
 		"has-symbols": "^1.0.1",
 		"is-typed-array": "^1.1.3"
