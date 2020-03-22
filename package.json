@@ -71,7 +71,7 @@
 		"make-arrow-function": "^1.2.0",
 		"make-generator-function": "^2.0.0",
 		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.0.0-next.4"
+		"tape": "^5.0.0-next.5"
 	},
 	"testling": {
 		"files": "test/index.js",
