@@ -61,7 +61,7 @@
 		"es-abstract": "^1.18.5",
 		"foreach": "^2.0.5",
 		"has-tostringtag": "^1.0.0",
-		"is-typed-array": "^1.1.6"
+		"is-typed-array": "^1.1.7"
 	},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^17.6.0",
