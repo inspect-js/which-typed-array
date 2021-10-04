@@ -58,10 +58,10 @@
 	"dependencies": {
 		"available-typed-arrays": "^1.0.5",
 		"call-bind": "^1.0.2",
-		"es-abstract": "^1.18.5",
+		"es-abstract": "^1.19.1",
 		"foreach": "^2.0.5",
 		"has-tostringtag": "^1.0.0",
-		"is-typed-array": "^1.1.7"
+		"is-typed-array": "^1.1.8"
 	},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^18.0.0",
