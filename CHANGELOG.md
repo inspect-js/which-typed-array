@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.10](https://github.com/inspect-js/which-typed-array/compare/v1.1.9...v1.1.10) - 2023-07-10
+
+### Commits
+
+- [actions] update rebase action to use reusable workflow [`2c10582`](https://github.com/inspect-js/which-typed-array/commit/2c105820d77274c079cb6d040cb348396e516ef5)
+- [Robustness] use `call-bind` [`b2335fd`](https://github.com/inspect-js/which-typed-array/commit/b2335fdfca80840995eea5e6fcfffc6d712279a1)
+- [Dev Deps] update `@ljharb/eslint-config`, `aud`, `tape` [`ad5e41b`](https://github.com/inspect-js/which-typed-array/commit/ad5e41ba18e7d23af1f9b211215c43a64bf75d70)
+
 ## [v1.1.9](https://github.com/inspect-js/which-typed-array/compare/v1.1.8...v1.1.9) - 2022-11-02
 
 ### Commits
