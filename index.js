@@ -2,6 +2,7 @@
 
 var forEach = require('for-each');
 var availableTypedArrays = require('available-typed-arrays');
+var callBind = require('call-bind');
 var callBound = require('call-bind/callBound');
 var gOPD = require('gopd');
 
@@ -12,7 +13,7 @@ var g = typeof globalThis === 'undefined' ? global : globalThis;
 var typedArrays = availableTypedArrays();
 
 var $slice = callBound('String.prototype.slice');
-var toStrTags = {};
+var toStrTags = { __proto__: null };
 var getPrototypeOf = Object.getPrototypeOf; // require('getprototypeof');
 if (hasToStringTag && gOPD && getPrototypeOf) {
 	forEach(typedArrays, function (typedArray) {
@@ -25,7 +26,7 @@ if (hasToStringTag && gOPD && getPrototypeOf) {
 					var superProto = getPrototypeOf(proto);
 					descriptor = gOPD(superProto, Symbol.toStringTag);
 				}
-				toStrTags[typedArray] = descriptor.get;
+				toStrTags[typedArray] = callBind(descriptor.get);
 			}
 		}
 	});
@@ -36,7 +37,7 @@ var tryTypedArrays = function tryAllTypedArrays(value) {
 	forEach(toStrTags, function (getter, typedArray) {
 		if (!foundName) {
 			try {
-				var name = getter.call(value);
+				var name = getter(value);
 				if (name === typedArray) {
 					foundName = name;
 				}
