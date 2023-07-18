@@ -62,8 +62,7 @@
 		"call-bind": "^1.0.2",
 		"for-each": "^0.3.3",
 		"gopd": "^1.0.1",
-		"has-tostringtag": "^1.0.0",
-		"is-typed-array": "^1.1.10"
+		"has-tostringtag": "^1.0.0"
 	},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^21.1.0",
