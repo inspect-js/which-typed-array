@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.11](https://github.com/inspect-js/which-typed-array/compare/v1.1.10...v1.1.11) - 2023-07-17
+
+### Commits
+
+- [Fix] `node &lt; v0.6` lacks proper Object toString behavior [`b8fd654`](https://github.com/inspect-js/which-typed-array/commit/b8fd65479c0bd18385378cfae79750ebf7cb6ee7)
+- [Dev Deps] update `tape` [`e1734c9`](https://github.com/inspect-js/which-typed-array/commit/e1734c99d79880ab11efa55220498a7a1e887834)
+
 ## [v1.1.10](https://github.com/inspect-js/which-typed-array/compare/v1.1.9...v1.1.10) - 2023-07-10
 
 ### Commits
