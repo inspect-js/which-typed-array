@@ -40,7 +40,7 @@ if (hasToStringTag && gOPD && getPrototypeOf) {
 } else {
 	forEach(typedArrays, function (typedArray) {
 		var arr = new g[typedArray]();
-		cache['$' + typedArray] = callBind(arr.slice);
+		cache['$' + typedArray] = callBind(arr.slice || arr.set);
 	});
 }
 
