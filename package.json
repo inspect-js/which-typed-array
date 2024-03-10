@@ -31,7 +31,7 @@
 		"test:harmony": "nyc node --harmony --es-staging test",
 		"posttest": "aud --production",
 		"lint": "eslint --ext=js,mjs .",
-		"postlint": "tsc -p .",
+		"postlint": "tsc -p . && attw -P",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
@@ -67,6 +67,7 @@
 		"has-tostringtag": "^1.0.1"
 	},
 	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.15.1",
 		"@ljharb/eslint-config": "^21.1.0",
 		"@types/call-bind": "^1.0.5",
 		"@types/for-each": "^0.3.3",
@@ -74,7 +75,7 @@
 		"@types/is-callable": "^1.1.2",
 		"@types/make-arrow-function": "^1.2.2",
 		"@types/make-generator-function": "^2.0.3",
-		"@types/node": "^20.11.14",
+		"@types/node": "^20.11.25",
 		"@types/tape": "^5.6.4",
 		"aud": "^2.0.4",
 		"auto-changelog": "^2.4.0",
@@ -86,8 +87,8 @@
 		"npmignore": "^0.3.1",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^2.0.0",
-		"tape": "^5.7.4",
-		"typescript": "^5.4.0-dev.20240131"
+		"tape": "^5.7.5",
+		"typescript": "next"
 	},
 	"testling": {
 		"files": "test/index.js",
