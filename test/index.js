@@ -90,12 +90,10 @@ test('@@toStringTag', { skip: !hasToStringTag }, function (t) {
 	t.end();
 });
 
-/** @typedef {Int8ArrayConstructor | Uint8ArrayConstructor | Uint8ClampedArrayConstructor | Int16ArrayConstructor | Uint16ArrayConstructor | Int32ArrayConstructor | Uint32ArrayConstructor | Float32ArrayConstructor | Float64ArrayConstructor | BigInt64ArrayConstructor | BigUint64ArrayConstructor} TypedArrayConstructor */
-
 test('Typed Arrays', function (t) {
 	forEach(typedArrayNames, function (typedArray) {
 		// @ts-expect-error TODO: fix
-		/** @type {TypedArrayConstructor} */ var TypedArray = global[typedArray];
+		/** @type {import('../').TypedArrayConstructor} */ var TypedArray = global[typedArray];
 		if (isCallable(TypedArray)) {
 			var arr = new TypedArray(10);
 			t.equal(whichTypedArray(arr), typedArray, 'new ' + typedArray + '(10) is typed array of type ' + typedArray);
