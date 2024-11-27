@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.16](https://github.com/inspect-js/which-typed-array/compare/v1.1.15...v1.1.16) - 2024-11-27
+
+### Commits
+
+- [actions] split out node 10-20, and 20+ [`8e289a9`](https://github.com/inspect-js/which-typed-array/commit/8e289a9665a32f7ea267c3ffed7451b154adbe26)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/eslint-config`, `@types/node`, `@types/tape`, `auto-changelog`, `tape` [`3d4a678`](https://github.com/inspect-js/which-typed-array/commit/3d4a67872d0dbecb755e63ba4101e9ec030a5e7e)
+- [Tests] replace `aud` with `npm audit` [`6fbada9`](https://github.com/inspect-js/which-typed-array/commit/6fbada976743192db47000e47eefc07708713ea0)
+- [types] add an additional overload [`db5a791`](https://github.com/inspect-js/which-typed-array/commit/db5a791642cd8b4d78fe4ed4da151c4543ee0840)
+- [Dev Deps] remove an unused DT package [`6bfff4c`](https://github.com/inspect-js/which-typed-array/commit/6bfff4c3b0c415cb32cd12be6fab3cbbe9e10e13)
+- [Dev Deps] add missing peer dep [`05fd582`](https://github.com/inspect-js/which-typed-array/commit/05fd582a703cd68ee7613af0ef2c45546ea5d2ba)
+
 ## [v1.1.15](https://github.com/inspect-js/which-typed-array/compare/v1.1.14...v1.1.15) - 2024-03-10
 
 ### Commits
