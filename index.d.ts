@@ -15,6 +15,7 @@ declare function whichTypedArray(value: Float32Array): 'Float32Array';
 declare function whichTypedArray(value: Float64Array): 'Float64Array';
 declare function whichTypedArray(value: BigInt64Array): 'BigInt64Array';
 declare function whichTypedArray(value: BigUint64Array): 'BigUint64Array';
+declare function whichTypedArray(value: whichTypedArray.TypedArray): whichTypedArray.TypedArrayName;
 declare function whichTypedArray(value: unknown): false | null;
 
 declare namespace whichTypedArray {
