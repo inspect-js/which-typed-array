@@ -76,7 +76,6 @@
 		"@types/is-callable": "^1.1.2",
 		"@types/make-arrow-function": "^1.2.2",
 		"@types/make-generator-function": "^2.0.3",
-		"@types/node": "^20.17.8",
 		"@types/tape": "^5.6.5",
 		"auto-changelog": "^2.5.0",
 		"encoding": "^0.1.13",
