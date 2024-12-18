@@ -77,7 +77,7 @@
 		"@types/is-callable": "^1.1.2",
 		"@types/make-arrow-function": "^1.2.2",
 		"@types/make-generator-function": "^2.0.3",
-		"@types/tape": "^5.7.0",
+		"@types/tape": "^5.8.0",
 		"auto-changelog": "^2.5.0",
 		"encoding": "^0.1.13",
 		"eslint": "=8.8.0",
