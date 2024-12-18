@@ -1,5 +1,3 @@
-import type { TypedArray } from 'is-typed-array';
-
 /**
  * Determines the type of the given collection, or returns false.
  *
@@ -34,7 +32,18 @@ declare namespace whichTypedArray {
     | 'BigInt64Array'
     | 'BigUint64Array';
 
-  export type { TypedArray };
+  export type TypedArray =
+  	| Int8Array
+	| Uint8Array
+	| Uint8ClampedArray
+	| Int16Array
+	| Uint16Array
+	| Int32Array
+	| Uint32Array
+	| Float32Array
+	| Float64Array
+	| BigInt64Array
+	| BigUint64Array;
 
   export type TypedArrayConstructor =
     | Int8ArrayConstructor
