@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.18](https://github.com/inspect-js/which-typed-array/compare/v1.1.17...v1.1.18) - 2024-12-18
+
+### Commits
+
+- [types] improve types [`4b57173`](https://github.com/inspect-js/which-typed-array/commit/4b5717349976578c6b48966d581687df5dcc2e9b)
+- [Dev Deps] update `@types/tape` [`81853b0`](https://github.com/inspect-js/which-typed-array/commit/81853b075c018538859a5533578be654fafecdae)
+
 ## [v1.1.17](https://github.com/inspect-js/which-typed-array/compare/v1.1.16...v1.1.17) - 2024-12-18
 
 ### Commits
