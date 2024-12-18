@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.17](https://github.com/inspect-js/which-typed-array/compare/v1.1.16...v1.1.17) - 2024-12-18
+
+### Commits
+
+- [types] improve types [`86bc612`](https://github.com/inspect-js/which-typed-array/commit/86bc61207e5970c2c7e13cdda4ccdeb0981ac40b)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/tsconfig`, `@types/tape` [`2e9bed6`](https://github.com/inspect-js/which-typed-array/commit/2e9bed67f1d623b176b1a7f06c5eab006c21cf96)
+- [Deps] update `call-bind`, `gopd` [`34579df`](https://github.com/inspect-js/which-typed-array/commit/34579df639e35ceb3a7e54f8e680a4077a950b8b)
+- [Refactor] use `call-bound` directly [`2a2d84e`](https://github.com/inspect-js/which-typed-array/commit/2a2d84e91045266841ddb47afe594899bae2f483)
+
 ## [v1.1.16](https://github.com/inspect-js/which-typed-array/compare/v1.1.15...v1.1.16) - 2024-11-27
 
 ### Commits
