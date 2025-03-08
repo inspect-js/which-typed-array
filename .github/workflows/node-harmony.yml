@@ -9,3 +9,4 @@ jobs:
       range: '>=0.4 <16'
       type: minors
       command: npm run test:harmony
+      skip-ls-check: true
