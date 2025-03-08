@@ -71,7 +71,7 @@
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.17.4",
 		"@ljharb/eslint-config": "^21.1.1",
-		"@ljharb/tsconfig": "^0.3.0",
+		"@ljharb/tsconfig": "^0.3.2",
 		"@types/call-bind": "^1.0.5",
 		"@types/for-each": "^0.3.3",
 		"@types/gopd": "^1.0.3",
