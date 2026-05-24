@@ -11,6 +11,7 @@ declare function whichTypedArray(value: Int16Array): 'Int16Array';
 declare function whichTypedArray(value: Uint16Array): 'Uint16Array';
 declare function whichTypedArray(value: Int32Array): 'Int32Array';
 declare function whichTypedArray(value: Uint32Array): 'Uint32Array';
+declare function whichTypedArray(value: Float16Array): 'Float16Array';
 declare function whichTypedArray(value: Float32Array): 'Float32Array';
 declare function whichTypedArray(value: Float64Array): 'Float64Array';
 declare function whichTypedArray(value: Float16Array): 'Float16Array';
@@ -20,19 +21,7 @@ declare function whichTypedArray(value: whichTypedArray.TypedArray): whichTypedA
 declare function whichTypedArray(value: unknown): false | null;
 
 declare namespace whichTypedArray {
-  export type TypedArrayName =
-    | 'Int8Array'
-    | 'Uint8Array'
-    | 'Uint8ClampedArray'
-    | 'Int16Array'
-    | 'Uint16Array'
-    | 'Int32Array'
-    | 'Uint32Array'
-    | 'Float32Array'
-    | 'Float64Array'
-    | 'Float16Array'
-    | 'BigInt64Array'
-    | 'BigUint64Array';
+  export type TypedArrayName = ReturnType<typeof import('available-typed-arrays')>[number];
 
   export type TypedArray =
   	| Int8Array
@@ -42,25 +31,14 @@ declare namespace whichTypedArray {
     | Uint16Array
     | Int32Array
     | Uint32Array
+    | Float16Array
     | Float32Array
     | Float64Array
     | Float16Array
     | BigInt64Array
     | BigUint64Array;
 
-  export type TypedArrayConstructor =
-    | Int8ArrayConstructor
-    | Uint8ArrayConstructor
-    | Uint8ClampedArrayConstructor
-    | Int16ArrayConstructor
-    | Uint16ArrayConstructor
-    | Int32ArrayConstructor
-    | Uint32ArrayConstructor
-    | Float32ArrayConstructor
-    | Float64ArrayConstructor
-    | Float16ArrayConstructor
-    | BigInt64ArrayConstructor
-    | BigUint64ArrayConstructor;
+  export type TypedArrayConstructor = typeof globalThis[TypedArrayName];
 }
 
 export = whichTypedArray;
