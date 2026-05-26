@@ -126,5 +126,8 @@
 			".github/workflows",
 			"types.d.ts"
 		]
+	},
+	"overrides": {
+		"fflate": "=0.8.2"
 	}
 }
