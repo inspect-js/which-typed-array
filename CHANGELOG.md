@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.21](https://github.com/inspect-js/which-typed-array/compare/v1.1.20...v1.1.21) - 2026-05-26
+
+### Commits
+
+- [types] add Float16Array [`b3dac9f`](https://github.com/inspect-js/which-typed-array/commit/b3dac9f6931f463d10b7e21b1b5e5369602642c4)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`; migrate to flat config [`2dd9b04`](https://github.com/inspect-js/which-typed-array/commit/2dd9b04cd3f461a0f4b19c607124e134e12df135)
+- [Dev Deps] update `@ljharb/eslint-config`, `auto-changelog`, `eslint` [`b46f6a2`](https://github.com/inspect-js/which-typed-array/commit/b46f6a2f000e932f7b78c54b9dce0bf940379fea)
+- [Tests] pin `fflate` to 0.8.2 [`06eb54e`](https://github.com/inspect-js/which-typed-array/commit/06eb54e4ee7369da3639a2291a1c6add642e53fb)
+- [Dev Deps] update `eslint` [`2181d61`](https://github.com/inspect-js/which-typed-array/commit/2181d61990f20c82c84d06bcd4a91ba70b486bc1)
+- [Deps] update `call-bind` [`ca58bca`](https://github.com/inspect-js/which-typed-array/commit/ca58bca5034adcbfc05797ffde7e9134c9df4a72)
+
 ## [v1.1.20](https://github.com/inspect-js/which-typed-array/compare/v1.1.19...v1.1.20) - 2026-01-14
 
 ### Commits
