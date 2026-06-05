@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.22](https://github.com/inspect-js/which-typed-array/compare/v1.1.21...v1.1.22) - 2026-06-05
+
+### Commits
+
+- [types] improve typings [`5a60076`](https://github.com/inspect-js/which-typed-array/commit/5a60076ec334e32dcb41d38b1eb6c2c49d18d097)
+- [Dev Deps] update `@arethetypeswrong/cli`, `auto-changelog`, `eslint` [`6fb45d2`](https://github.com/inspect-js/which-typed-array/commit/6fb45d27e29dc0384d142c3af95540dfe7409207)
+
 ## [v1.1.21](https://github.com/inspect-js/which-typed-array/compare/v1.1.20...v1.1.21) - 2026-05-26
 
 ### Commits
