@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.23](https://github.com/inspect-js/which-typed-array/compare/v1.1.22...v1.1.23) - 2026-09-16
+
+### Commits
+
+- [types] handle a consumer `lib` that lacks `Float16Array` [`7fd78fb`](https://github.com/inspect-js/which-typed-array/commit/7fd78fb1f90d00d1e340457c7e6a00492c1c5e79)
+- [Dev Deps] update `@arethetypeswrong/cli`, `@ljharb/eslint-config`, `auto-changelog`, `eslint`, `tape` [`885ae7d`](https://github.com/inspect-js/which-typed-array/commit/885ae7d6888b21bcacaae883f86861258196888d)
+- [readme] remove dead badges [`67844dd`](https://github.com/inspect-js/which-typed-array/commit/67844dd30a89dddfc98172672af6372ae2e74d13)
+
 ## [v1.1.22](https://github.com/inspect-js/which-typed-array/compare/v1.1.21...v1.1.22) - 2026-06-05
 
 ### Commits
