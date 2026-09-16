@@ -4,7 +4,7 @@
  * @param {unknown} value The potential collection
  * @returns {TypedArrayName | false | null} 'Int8Array' | 'Uint8Array' | 'Uint8ClampedArray' | 'Int16Array' | 'Uint16Array' | 'Int32Array' | 'Uint32Array' | 'Float32Array' | 'Float64Array' | 'BigInt64Array' | 'BigUint64Array' | false | null
  */
-declare function whichTypedArray<T>(value: T): false | null | whichTypedArray.WhichTypedArray<T>;
+declare function whichTypedArray<T>(value: T): whichTypedArray.WhichTypedArray<T>;
 declare function whichTypedArray(value: unknown): false | null | whichTypedArray.TypedArrayName;
 
 import TAs from 'available-typed-arrays';
@@ -12,7 +12,8 @@ import TAs from 'available-typed-arrays';
 declare namespace whichTypedArray {
 	export type TypedArrayName = ReturnType<typeof TAs>[number];
 
-	export type TypedArrayConstructor = typeof globalThis[TypedArrayName];
+	// a consumer's `lib` may not declare every name (eg, `Float16Array`), so only look up the globals it has
+	export type TypedArrayConstructor = typeof globalThis[TypedArrayName & keyof typeof globalThis];
 
 	export type TypedArray = TypedArrayConstructor['prototype'];
 
@@ -25,10 +26,10 @@ declare namespace whichTypedArray {
 	 */
 	export type WhichTypedArray<T> =
 		| {
-			[Name in TypedArrayName]: T extends typeof globalThis[Name]['prototype']
+			[Name in TypedArrayName & keyof typeof globalThis]: T extends typeof globalThis[Name]['prototype']
 				? Name
 				: never
-		}[TypedArrayName]
+		}[TypedArrayName & keyof typeof globalThis]
 		| ([T] extends [TypedArray] ? never : false | null);
 }
 
