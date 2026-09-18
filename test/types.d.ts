@@ -42,7 +42,7 @@ type _bigints = Assert<
 
 type _everyName = Assert<Equal<WhichTypedArray<TypedArray>, TypedArrayName>>;
 
-type _unknownInput = Assert<Equal<WhichTypedArray<unknown>, false | null>>;
+type _unknownInput = Assert<Equal<WhichTypedArray<unknown>, TypedArrayName | false | null>>;
 type _mixedInput = Assert<
     Equal<
         WhichTypedArray<Int8Array | string>,
@@ -50,3 +50,72 @@ type _mixedInput = Assert<
     >
 >;
 
+type _anyInput = Assert<Equal<WhichTypedArray<any>, TypedArrayName | false | null>>;
+type _objectInput = Assert<Equal<WhichTypedArray<object>, TypedArrayName | false | null>>;
+type _emptyObjectInput = Assert<Equal<WhichTypedArray<{}>, TypedArrayName | false | null>>;
+type _viewInput = Assert<Equal<WhichTypedArray<ArrayBufferView>, TypedArrayName | false | null>>;
+type _lengthInput = Assert<Equal<WhichTypedArray<{ length: number }>, TypedArrayName | false | null>>;
+type _lengthLiteralInput = Assert<Equal<WhichTypedArray<{ length: 0 }>, TypedArrayName | false | null>>;
+type _iterableInput = Assert<Equal<WhichTypedArray<Iterable<number>>, TypedArrayName | false | null>>;
+type _nestedBufferInput = Assert<
+    Equal<
+        WhichTypedArray<{ buffer: { byteLength: 0 } }>,
+        TypedArrayName | false | null
+    >
+>;
+type _optionalExtraMemberInput = Assert<
+    Equal<
+        WhichTypedArray<{ foo?: string; length: 0 }>,
+        TypedArrayName | false | null
+    >
+>;
+type _anyIndexSignatureInput = Assert<
+    Equal<
+        WhichTypedArray<{ [k: string]: any; length: 0 }>,
+        TypedArrayName | false | null
+    >
+>;
+
+type _arrayLikeNumberInput = Assert<
+    Equal<
+        WhichTypedArray<ArrayLike<number>>,
+        Exclude<TypedArrayName, 'BigInt64Array' | 'BigUint64Array'> | false | null
+    >
+>;
+type _arrayLikeBigIntInput = Assert<
+    Equal<
+        WhichTypedArray<ArrayLike<bigint>>,
+        'BigInt64Array' | 'BigUint64Array' | false | null
+    >
+>;
+type _toStringTagInput = Assert<
+    Equal<
+        WhichTypedArray<{ readonly [Symbol.toStringTag]: 'Int8Array' }>,
+        'Int8Array' | false | null
+    >
+>;
+type _wideTagInput = Assert<
+    Equal<
+        WhichTypedArray<Omit<Int8Array, typeof Symbol.toStringTag> & { readonly [Symbol.toStringTag]: string }>,
+        'Int8Array' | false | null
+    >
+>;
+
+type _requiredExtraMemberInput = Assert<Equal<WhichTypedArray<{ foo: string; length: 0 }>, false | null>>;
+type _privateMemberInput = Assert<Equal<WhichTypedArray<PrivateLength>, false | null>>;
+type _templateIndexInput = Assert<Equal<WhichTypedArray<{ [k: `x${string}`]: number }>, false | null>>;
+type _numericKeyInput = Assert<Equal<WhichTypedArray<{ 0: number; length: 1 }>, false | null>>;
+type _recordUnknownInput = Assert<Equal<WhichTypedArray<Record<string, unknown>>, false | null>>;
+type _valueOfInput = Assert<Equal<WhichTypedArray<{ valueOf(): number }>, false | null>>;
+type _disjointInput = Assert<Equal<WhichTypedArray<{ foo: string }>, false | null>>;
+type _dateInput = Assert<Equal<WhichTypedArray<Date>, false | null>>;
+type _arrayInput = Assert<Equal<WhichTypedArray<number[]>, false | null>>;
+type _bufferInput = Assert<Equal<WhichTypedArray<ArrayBuffer>, false | null>>;
+type _dataViewInput = Assert<Equal<WhichTypedArray<DataView>, false | null>>;
+type _nullInput = Assert<Equal<WhichTypedArray<null>, false | null>>;
+
+declare class PrivateLength {
+    private brand: unknown;
+
+    length: 0;
+}
