@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.24](https://github.com/inspect-js/which-typed-array/compare/v1.1.23...v1.1.24) - 2026-09-18
+
+### Commits
+
+- [types] fix the types for good, hopefully [`d746946`](https://github.com/inspect-js/which-typed-array/commit/d746946a8a76dc6e58302de53856aff304dbdb98)
+
 ## [v1.1.23](https://github.com/inspect-js/which-typed-array/compare/v1.1.22...v1.1.23) - 2026-09-16
 
 ### Commits
